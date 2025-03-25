@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Delights Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="brand">Sweet Delights</div>
+        <button class="nav-toggle">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#products">Items</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#cart" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+    </nav>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Bakery</h1>
+            <p>Discover the taste of happiness</p>
+        </div>
+    </section>
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="products-grid" id="products-container">
+            <!-- Products will be added dynamically -->
+        </div>
+    </section>
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Welcome to Sweet Delights, where passion meets perfection in every bite. Since 2010, we've been crafting delicious treats that bring joy to our community.</p>
+                    <p>Our team of expert bakers uses only the finest ingredients to create memorable desserts and pastries that make every occasion special.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>Fresh Daily</h3>
+                            <p>All our products are baked fresh every morning</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Quality Ingredients</h3>
+                            <p>We use premium, locally-sourced ingredients</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Custom Orders</h3>
+                            <p>Special occasions deserve special treats</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="info-item">
+                    <strong>Address:</strong>
+                    <p>123 Baker Street, Sweetville, SW 12345</p>
+                </div>
+                <div class="info-item">
+                    <strong>Phone:</strong>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <strong>Email:</strong>
+                    <p>hello@sweetdelights.com</p>
+                </div>
+                <div class="info-item">
+                    <strong>Hours:</strong>
+                    <p>Mon-Sat: 7:00 AM - 8:00 PM</p>
+                    <p>Sunday: 8:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total: $<span id="cart-total">0.00</span></strong>
+            </div>
+            <button id="checkout-btn" class="btn">Proceed to Checkout</button>
+            <button id="close-cart" class="btn">Close</button>
+        </div>
+    </div>
+    <!-- Order Form Modal -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <h2>Order Details</h2>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address:</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <button type="submit" class="btn">Confirm Order</button>
+                <button type="button" id="close-order" class="btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
